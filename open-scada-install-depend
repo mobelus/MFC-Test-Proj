@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+
+apt update
+apt install -y libtool zlib1g-dev libpcre3-dev libssl-dev libqt4-dev bison sqlite3 libsqlite3-dev libmysql++-dev
+
+
+
+
+
+
+root@superuser-Z370-HD3P:/home/superuser# ./openscada --config=../data/ModelsDB/AGLKS/oscada_AGLKS.xml --station=AGLKS
+
+
+root@superuser-Z370-HD3P:/home/superuser# ./configure --enable-shared
+
+
+
+root@superuser-Z370-HD3P:/home/superuser# make install
+
+
+
+apt install libfftw3-dev
+
+
+
+
+
+
+
+
+
+
+
+
+
+/home/superuser/develop/OpenSCADA
+
+
+
+
+superuser@superuser-Z370-HD3P:~$ su
+root
+
+superuser@superuser-Z370-HD3P:~$ make clean
+
+
+
+superuser@superuser-Z370-HD3P:~$ ./configure --help
+
+
+
+
+
+
+
+
