@@ -2,6 +2,57 @@
 MFC Project with most used Interface elements shown on one Dialog-window with russian translation for everyone who is not familiar with the Interface-Elements in a Software-Product.
 
 
+
+apt update 
+apt upgrade
+apt-get upgrade
+
+apt install ifconfig net-tools openssh-server
+
+apt install mc
+
+
+
+mkdir develop
+cd develop/
+svn co http://oscada.org/svn/trunk/OpenSCADA/
+
+cd OpenSCADA/
+autoreconf -if
+./configure
+make
+install
+
+
+
+make clean
+
+
+
+wget -O - http://ftp.oscada.org/Misc/pkgSignKey | sudo apt-key add 
+
+wget -m ftp://ftp.oscada.org/OpenSCADA/Work/Ubuntu/16.04 /home/superuser/Downloads
+
+wget http://ftp.oscada.org/Misc/pkgSignKey
+apt-key add pkgSignKey
+apt update
+
+nano /etc/apt/sources.list
+
+apt-cache search SCADA
+
+
+
+apt-get install openscada-Model.AGLKS
+apt-get install openscada-Model.AGLKS --allow-unauthenticated
+apt-get install openscada-Model.AGLKS --allow-unauthenticated
+
+
+chmod +x open-scada-install-depend
+
+
+
+
 libtool pkg-config
 zlib1g-dev
 libpcre3-dev
