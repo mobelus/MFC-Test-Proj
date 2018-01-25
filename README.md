@@ -1,4 +1,4 @@
-# MFC All Controls App
+ # MFC All Controls App
 MFC Project with most used Interface elements shown on one Dialog-window with russian translation for everyone who is not familiar with the Interface-Elements in a Software-Product.
 
 
@@ -21,12 +21,12 @@ apt update
 apt install -y pkg-config libtool zlib1g-dev libpcre3-dev libssl-dev libqt4-dev bison sqlite3 libsqlite3-dev libmysql++-dev
 
 
----------------------- CONFIGURE SCADA  ----------------------------------------
+---------------------- OPEN SCADA CONFIGURE --------------------------------------
 
 ./configure --disable-graphics --other-flags
 
 
----------------------- OPEN SCADA BUILD -----------------------------------------
+---------------------- OPEN SCADA BUILD ------------------------------------------
 
 #!/usr/bin/env bash
 
@@ -166,3 +166,12 @@ checking whether make sets $(MAKE)... yes
 
 
 superuser@superuser-Z370-HD3P:~/develop/OpenSCADA$ ./configure --help
+
+
+
+---------------------- OPEN SCADA MAKE ------------------------------------------
+
+After Build just use
+
+make
+
