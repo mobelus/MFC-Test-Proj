@@ -1,0 +1,99 @@
+
+demo concentrator running on demo host 192.168.1.143
+
+RI:11000:r:pt1_pos:PT1_POS
+RI:11001:r:reg0:PT1_BUSY
+RI:11002:r:reg1:PT1_BLK
+RI:11003:r:pt1_lock:PT1_LOCK
+RI:11010:r:pt2_pos:PT2_POS
+RI:11011:r:pt2_busy:PT2_BUSY
+RI:11012:r:pt2_blk:PT2_BLK
+RI:11013:r:pt2_lock:PT2_LOCK
+RI:20000:r:way1_lock:WAY1_LOCK
+RI:20001:r:way1_busy:WAY1_BUSY
+
+
+
+RI:101010:rw:test_1:TEST_1
+C:3:r:coil3:Bit
+R:100:r:AT101_1_Ti:AT101_1 Ti
+R_b1:102:rw:reBit:reBit
+R_i8:10:rw:point_r8:POINT_R8
+R_i8:120:rw:way2_lock:WAY2_LOCK
+R_i8:130:rw:way2_busy:WAY2_BUSY
+
+
+
+var w2Lock = idViewWayCoastDownMiddle_way2cLock;
+var w2Busy = idViewWayCoastDownMiddle_way2cBusy;
+
+if(w2Busy == 0 || w2Lock == 0)   { idViewWayCoastDownMiddle_c1="gray";  idViewWayCoastDownMiddle_c2="gray";  }
+else if (w2Busy==1 && w2Lock==1) { idViewWayCoastDownMiddle_c1="black"; idViewWayCoastDownMiddle_c2="black"; }
+
+
+
+prm:/ModBus/ID_BAIKAL_CNTR/ID_CONT_BAIKAL/way2_busy (+)
+prm:/ModBus/ID_BAIKAL_CNTR/ID_CONT_BAIKAL/way2_lock (+)
+
+prm:/ModBus/ID_CONCENTRATOR/ID_CONT_POINT1_2/way1_busy
+prm:/ModBus/ID_CONCENTRATOR/ID_CONT_POINT1_2/way1_lock
+
+var w2Lock = idViewWayCoastDownMiddle_way2cLock;
+var w2Busy = idViewWayCoastDownMiddle_way2cBusy;
+
+if(w2Busy == 0 || w2Lock == 0)   { idViewWayCoastDownMiddle_c1="gray";  idViewWayCoastDownMiddle_c2="gray";  }
+else if (w2Busy==1 && w2Lock==1) { idViewWayCoastDownMiddle_c1="black"; idViewWayCoastDownMiddle_c2="black"; }
+else if (w2Busy==1 && w2Lock==2) { idViewWayCoastDownMiddle_c1="green"; idViewWayCoastDownMiddle_c2="green"; }
+else if (w2Busy==1 && w2Lock==3) { idViewWayCoastDownMiddle_c1="yellow";idViewWayCoastDownMiddle_c2="yellow";}
+else if (w2Busy==2 && w2Lock==1) { idViewWayCoastDownMiddle_c1="red";   idViewWayCoastDownMiddle_c2="red"; }
+else if (w2Busy==2 && w2Lock==2) { idViewWayCoastDownMiddle_c1="red"; idViewWayCoastDownMiddle_c2="green"; }
+else if (w2Busy==2 && w2Lock==3) { idViewWayCoastDownMiddle_c1="red"; idViewWayCoastDownMiddle_c2="yellow"; }
+
+var w1Lock = idViewWayCoastUpMiddle_way1cLock;
+var w1Busy = idViewWayCoastUpMiddle_way1cBusy;
+
+if(w1Busy == 0 || w1Lock == 0)   { idViewWayCoastUpMiddle_c1="gray";  idViewWayCoastUpMiddle_c2="gray";  }
+else if (w1Busy==1 && w1Lock==1) { idViewWayCoastUpMiddle_c1="black"; idViewWayCoastUpMiddle_c2="black"; }
+else if (w1Busy==1 && w1Lock==2) { idViewWayCoastUpMiddle_c1="green"; idViewWayCoastUpMiddle_c2="green"; }
+else if (w1Busy==1 && w1Lock==3) { idViewWayCoastUpMiddle_c1="yellow";idViewWayCoastUpMiddle_c2="yellow";}
+else if (w1Busy==2 && w1Lock==1) { idViewWayCoastUpMiddle_c1="red";   idViewWayCoastUpMiddle_c2="red"; }
+else if (w1Busy==2 && w1Lock==2) { idViewWayCoastUpMiddle_c1="red"; idViewWayCoastUpMiddle_c2="green"; }
+else if (w1Busy==2 && w1Lock==3) { idViewWayCoastUpMiddle_c1="red"; idViewWayCoastUpMiddle_c2="yellow"; }
+
+
+
+
+=================================================
+
+
+
+
+var w2Lock = idViewWayCoastDownMiddle_way2cLock;
+var w2Busy = idViewWayCoastDownMiddle_way2cBusy;
+
+if(w2Busy == 0 || w2Lock == 0)   { idViewWayCoastDownMiddle_c1="gray";  idViewWayCoastDownMiddle_c2="gray";  }
+else if (w2Busy==1 && w2Lock==1) { idViewWayCoastDownMiddle_c1="black"; idViewWayCoastDownMiddle_c2="black"; }
+else if (w2Busy==1 && w2Lock==2) { idViewWayCoastDownMiddle_c1="green"; idViewWayCoastDownMiddle_c2="green"; }
+else if (w2Busy==1 && w2Lock==3) { idViewWayCoastDownMiddle_c1="yellow";idViewWayCoastDownMiddle_c2="yellow";}
+else if (w2Busy==2 && w2Lock==1) { idViewWayCoastDownMiddle_c1="red";   idViewWayCoastDownMiddle_c2="red"; }
+else if (w2Busy==2 && w2Lock==2) { idViewWayCoastDownMiddle_c1="red"; idViewWayCoastDownMiddle_c2="green"; }
+else if (w2Busy==2 && w2Lock==3) { idViewWayCoastDownMiddle_c1="red"; idViewWayCoastDownMiddle_c2="yellow"; }
+
+var w1Lock = idViewWayCoastUpMiddle_way1cLock;
+var w1Busy = idViewWayCoastUpMiddle_way1cBusy;
+
+if(w1Busy == 0 || w1Lock == 0)   { idViewWayCoastUpMiddle_c1="gray";  idViewWayCoastUpMiddle_c2="gray";  }
+else if (w1Busy==1 && w1Lock==1) { idViewWayCoastUpMiddle_c1="black"; idViewWayCoastUpMiddle_c2="black"; }
+else if (w1Busy==1 && w1Lock==2) { idViewWayCoastUpMiddle_c1="green"; idViewWayCoastUpMiddle_c2="green"; }
+else if (w1Busy==1 && w1Lock==3) { idViewWayCoastUpMiddle_c1="yellow";idViewWayCoastUpMiddle_c2="yellow";}
+else if (w1Busy==2 && w1Lock==1) { idViewWayCoastUpMiddle_c1="red";   idViewWayCoastUpMiddle_c2="red"; }
+else if (w1Busy==2 && w1Lock==2) { idViewWayCoastUpMiddle_c1="red"; idViewWayCoastUpMiddle_c2="green"; }
+else if (w1Busy==2 && w1Lock==3) { idViewWayCoastUpMiddle_c1="red"; idViewWayCoastUpMiddle_c2="yellow"; }
+
+
+
+
+
+
+
+
