@@ -78,83 +78,88 @@ D:\tmp\CMake-VisualStudio-Example\_build> cmake .. -G "Visual Studio 15 2017 Win
 
 # ПОЛЕЗНЫЕ ССЫЛКИ И ОБЩАЯ ИНФООРМАЦИЯ
 
-OpenScada QuickStart \ Быстрый старт
-Желательно посмотреть перед использованием и установкой:
+OpenScada QuickStart \ Быстрый старт  
+Желательно посмотреть перед использованием и установкой:  
 https://www.youtube.com/watch?v=laIyxYoT79Y
 
-Статья на Хабре - стоит почитать после минимального использования:
+Статья на Хабре - стоит почитать после минимального использования:  
 https://habrahabr.ru/post/238537/
 
-Общее описание программы OpenSCADA на одной странице - http://wiki.oscada.org/Doc/OpisanieProgrammy?v=146v#h920-16
-Варианты работы и конфигурации openSCADA:
+Общее описание программы OpenSCADA на одной странице  
+http://wiki.oscada.org/Doc/OpisanieProgrammy?v=146v#h920-16
+
+Варианты работы и конфигурации openSCADA:  
 http://wiki.oscada.org/Doc/OpisanieProgrammy/part3
-Прочее:
-1 - http://oscada.org/ru/forum/posts/raznoe/openscada_kak_posrednik_poseredine/
-2 - http://oscada.org/ru/forum/posts/raznoe/2_proekta_na_raznykh_mashinakh/
-3 - http://oscada.org/ru/forum/posts/vnedrenie_i_razrabotka_v_openscada/zapusk_proekta_s_udalennogo_servera/
+
+Прочее:  
+1 - http://oscada.org/ru/forum/posts/raznoe/openscada_kak_posrednik_poseredine/  
+2 - http://oscada.org/ru/forum/posts/raznoe/2_proekta_na_raznykh_mashinakh/  
+3 - http://oscada.org/ru/forum/posts/vnedrenie_i_razrabotka_v_openscada/zapusk_proekta_s_udalennogo_servera/  
 
 
-(!!! ВНИМАНИЕ !!!) Не забываем, что в инструкции по установке от автора, имеется только описание по установке для Ubuntu версий 12.04, 14.04, 16.04. Не пытайтесь ставить на Ubuntu 17 !!! (Предупреждение актуально на 01.02.2018) 
+**(!!! ВНИМАНИЕ !!!) Не забываем, что в инструкции по установке от автора, имеется только описание по установке для Ubuntu версий 12.04, 14.04, 16.04. Не пытайтесь ставить на Ubuntu 17 !!! (Предупреждение актуально на 01.02.2018)**
 
 
 # НАЧНЁМ УСТАНОВКУ OPENSCADA:
 
+```
 sudo apt update
-
 sudo apt upgrade
-
-We will follow the instruction from the author`s web-site:
+```
+We will follow the instruction from the author's web-site:  
 http://oscada.org/ru/glavnaja/zagruzit/
 
-Software & Updates -> Other Software -> Add
+Software & Updates -> Other Software -> Add  
 "deb ftp://ftp.oscada.org/OpenSCADA/Work/Ubuntu/16.04 ./"
 
-Software & Updates -> Other Software -> Authentication -> Import Key File
-Save file with Key from the Website "APTSignKey"
-Add it to the Keys in the  Authentication-edit-window
+Software & Updates -> Other Software -> Authentication -> Import Key File  
+Save file with Key from the Website "APTSignKey"  
+Add it to the Keys in the  Authentication-edit-window  
 
-Check if openscada is present:
-
+Check if openscada is present:  
+```
 sudo su
 root@our_user:/home/our_user# apt update
 root@our_user:/home/our_user# apt-cache search openscada
 root@our_user:/home/our_user# exit
-
+```
+```
 sudo apt install openscada
-
 sudo apt install openscada-model-aglks
-
+```
 
 (!) IF PROBLEM WITH: libmysqlclient18 appears
 
-(The following packages have unmet dependencies:
- openscada : Depends: libmysqlclient18 (>= 5.5.24+dfsg-1) but it is not installable
+(The following packages have unmet dependencies:  
+ openscada : Depends: libmysqlclient18 (>= 5.5.24+dfsg-1) but it is not installable  
  E: Unable to correct problems, you have held broken packages.)
 
-Download .deb file from here:
+Download .deb file from here:  
 https://packages.debian.org/jessie/amd64/libmysqlclient18/download
 
 launch and install the deb-file for libmysqlclient18
 
 
 Reinsall openscada again and correctly:
-
+```
 sudo apt install openscada
-
 sudo apt install openscada-model-aglks
+```
 
 
-
-Термины и обозначения:
-Источник данных (далее Источник) = Сервер = Slave (в терминах ModBus)
+Термины и обозначения:  
+**Источник данных (далее Источник) = Сервер = Slave (в терминах ModBus)
 Посредник ретранслятор (далее Ретранслятор) – Одновременно и Получатель, ибо получает данные от Источника, и Источник для ещё одного стороннего / конечного Получателя
 Получатель данных (далее Получатель) = Клиент = Master (в терминах ModBus)
 
-# ВАРИАНТ 1 Источник (Modbus Emulator) -> Получатель (openSCADA)
+# ВАРИАНТ 1 
+**Источник (Modbus Emulator) -> Получатель (openSCADA)**
 
-# ВАРИАНТ 2 Источник (openSCADA) -> Получатель (openSCADA)
+# ВАРИАНТ 2
+**Источник (openSCADA) -> Получатель (openSCADA)**
 
-# ВАРИАНТ 3 Источник (Modbus Emulator) -> Ретранслятор (openSCADA) -> Получатель (openSCADA) 
+# ВАРИАНТ 3
+**Источник (Modbus Emulator) -> Ретранслятор (openSCADA) -> Получатель (openSCADA)** 
 
 На Ретрансляторе: 
 - Транспорты Сокеты
@@ -165,7 +170,7 @@ sudo apt install openscada-model-aglks
 
 На клиенте настраивается раздел:
 - Жмём на «Транспорты»
-- Попадаем в «Подсистема Транспорты» и смотри на перечень Внешних хостов
+- Попадаем в «Подсистема Транспорты» и смотри на перечень Внешних хостов  
 (или Системные внешние хосты (галочка установлена))
 
 Добавляем запись во внешние хосты:
@@ -175,14 +180,14 @@ sudo apt install openscada-model-aglks
 - Так же вводим логин и пароль для доступа к серверу. (по умолчанию log: roman, pass: roman)
 
 На Клиенте в разделе 
- - Интерфейсы Пользователя
- - Рабочий пользовательский интерфейс (QT) 
+ - Интерфейсы Пользователя  
+ - Рабочий пользовательский интерфейс (QT)  
  - Станция движка СВУ выбираем (ИМЯ_ХОСТА) имя станции-сервера созданной в разделе системные внешние хосты.
  
 Далее запускаем рабочий пользовательский интерфейс. Все!
 
 Если в разделе Транспорты-перечень внешних хостов 
-галочка "Системные внешние хосты" не установлена и введено название и параметры связи с сервером, то в списке станций на клиенте появляется проект, запущенный на сервере. Его можно редактировать с клиента.
+галочка "Системные внешние хосты" не установлена и введено название и параметры связи с сервером, то в списке станций на клиенте   появляется проект, запущенный на сервере. Его можно редактировать с клиента.
 
 
 
