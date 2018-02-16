@@ -1,5 +1,83 @@
 
 
+
+# Введение
+
+Это шаблонный проект для конфигурирования сборки на CMake начиная с версии 3.5. Он влючает в себя 2 примера в виде application и library. Подпроекты объеденены родительским файлом CMakeLists.txt в корневой дирректории.
+
+- library - пример динамической библиотеки c использованием qt.
+- application - пример исполняемого графического приложения с использованием qt.
+
+Проект создан для заимствования его как шаблона и создании на основе его своих проектов.
+
+# Сборка проекта в консоли
+
+Необходимо наличие путей в переменной окружения PATH до gcc, Cmake и Qt.
+Если путь до Qt не задан то его можно задать в переменной  QT_DIR (-DQT_DIR="C:/Qt/Qt5.9.0/5.9/mingw53_32/").
+Для сборки под другую версию библиотеки Qt нужно указать конктретную версию через переменную QT_VERSION (-DQT_VERSION=5.9.0)
+
+**под Windows:**
+```
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE=Debug [Release|Debug] -DCMAKE_INSTALL_PREFIX="install directory" -G "MinGW Makefile" ..
+cmake --build . --target all
+cmake --build .	--target install
+```
+**под Linux:**
+Можно выполнить команды как и под Windows или следующие
+```
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE=Debug [Release|Debug] -DCMAKE_INSTALL_PREFIX="install directory" ..
+make
+make install
+```
+
+
+# Настройка среды в QtCreator
+
+Шаг 1. Настройка
+Версии среды разработки: Qt 5.9, QtCreator 4.3.1, MinGW 5.3, CMake 3.8
+Необходимо добавить в дирректорию PATH пути до
+- Qt (C:\Qt\Qt5.9.0\5.9\mingw53_32\bin)
+- MainGw (C:\Qt\Qt5.9.0\Tools\mingw530_32\bin)
+- CMake (C:\Program Files (x86)\CMake\bin)
+
+Настройка среды QtCreator осуществляется в "Инструмены"->"Параметры..", как показано на рисунке
+![Image QtCreator settings](qt_creator_settings.jpg)
+
+Дирректория установки задается в переменной окружения CMAKE_INSTALL_PREFIX
+
+Шаг 2. Сборка проекта
+Необходимо убрать теневую дирректорию сборки и указать путь с исходниками.
+После открытия корневого файла CMakeLists.txt, необходимо выполнить CMake ("Сборка"->"Запустить CMake").
+Далее можно собрать и установить.
+
+Шаг 3. Установка
+Можно настроить установку проекта по команде сmake -- target install. В настройках проекта в разделе запуск, добавить этап сборка с установленным параметром install. После этого будет доступен пункт "Сборка"->"Установить проект".
+
+
+# Настройка среды в VisualStudio
+
+Необходимо наличие путей в переменной окружения PATH до msvs компилятора, Cmake и Qt.
+Если путь до Qt не задан то его можно задать в переменной  QT_DIR (-DQT_DIR="C:/Qt/Qt5.9.0/5.9/mingw53_32/").
+Для сборки под другую версию библиотеки Qt нужно указать конктретную версию через переменную QT_VERSION (-DQT_VERSION=5.9.0)
+
+Шаг 1. Необходимо из CMakeLists.txt собрать проектный файл для VS.
+
+```
+D:\tmp\CMake-VisualStudio-Example> mkdir build
+D:\tmp\CMake-VisualStudio-Example> cd build
+D:\tmp\CMake-VisualStudio-Example\_build> cmake .. -G "Visual Studio 15 2017 Win64"
+```
+
+"D:\tmp\CMake-VisualStudio-Example" корнивая дирректория с проектом. Для просмотра доступных генераторов Cmake --help. 
+Шаг 2. В дирректории build будет создан *.sln файл для VS, которые можно открыть и работать в привычной среде.
+
+
+
+
 # ПОЛЕЗНЫЕ ССЫЛКИ И ОБЩАЯ ИНФООРМАЦИЯ
 
 OpenScada QuickStart \ Быстрый старт
