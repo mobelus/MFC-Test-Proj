@@ -92,9 +92,9 @@ http://wiki.oscada.org/Doc/OpisanieProgrammy?v=146v#h920-16
 http://wiki.oscada.org/Doc/OpisanieProgrammy/part3
 
 Прочее:  
-1 - http://oscada.org/ru/forum/posts/raznoe/openscada_kak_posrednik_poseredine/  
-2 - http://oscada.org/ru/forum/posts/raznoe/2_proekta_na_raznykh_mashinakh/  
-3 - http://oscada.org/ru/forum/posts/vnedrenie_i_razrabotka_v_openscada/zapusk_proekta_s_udalennogo_servera/  
+1. http://oscada.org/ru/forum/posts/raznoe/openscada_kak_posrednik_poseredine/  
+2. http://oscada.org/ru/forum/posts/raznoe/2_proekta_na_raznykh_mashinakh/  
+3. http://oscada.org/ru/forum/posts/vnedrenie_i_razrabotka_v_openscada/zapusk_proekta_s_udalennogo_servera/  
 
 
 # Установка OpenSCADA:
@@ -149,7 +149,7 @@ sudo apt install openscada-model-aglks
 ```
 
 
-# Варисанты настройки для исполь
+# Варианты настройки для использования
 
 Термины и обозначения:  
 - Источник данных (далее **Источник**) = Сервер = Slave (в терминах ModBus)
