@@ -2,14 +2,10 @@
 MFC Project with most used Interface elements shown on one Dialog-window with russian translation for everyone who is not familiar with the Interface-Elements in a Software-Product.
 
 
-# SMARTGIT
-
+# RabbitVCS (TortoesGit for Linux)
 https://www.youtube.com/watch?v=fCYWjba4UHs
 
-# RabbitVCS
-
-https://www.youtube.com/watch?v=C76CMOzMlEY
-
+https://www.youtube.com/watch?v=eKPtky35FJ4
 
 
 # Сборка NEW
