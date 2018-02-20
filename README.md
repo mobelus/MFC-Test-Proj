@@ -2,6 +2,16 @@
 MFC Project with most used Interface elements shown on one Dialog-window with russian translation for everyone who is not familiar with the Interface-Elements in a Software-Product.
 
 
+# SMARTGIT
+
+https://www.youtube.com/watch?v=fCYWjba4UHs
+
+# RabbitVCS
+
+https://www.youtube.com/watch?v=C76CMOzMlEY
+
+
+
 # Сборка NEW
 
 http://wiki.oscada.org/Doc/SborkaIzIsxodnikov
