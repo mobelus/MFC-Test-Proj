@@ -7,6 +7,12 @@ https://www.youtube.com/watch?v=fCYWjba4UHs
 
 https://www.youtube.com/watch?v=eKPtky35FJ4
 
+# Git with Visual Studio Code (Linux)
+https://www.youtube.com/watch?v=6n1G45kpU2o
+
+# Git with Visual Studio (Win)
+https://www.youtube.com/watch?v=jUiuIAZt6Dw
+
 
 # Сборка NEW
 
