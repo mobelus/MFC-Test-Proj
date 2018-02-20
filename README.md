@@ -1,3 +1,40 @@
+# MFC All Controls App
+MFC Project with most used Interface elements shown on one Dialog-window with russian translation for everyone who is not familiar with the Interface-Elements in a Software-Product.
+
+
+# Сборка NEW
+
+http://wiki.oscada.org/Doc/SborkaIzIsxodnikov
+
+
+Этапы глобальной сборки:
+
+Конфигурация сборочный системы OpenSCADA:  
+./configure
+
+
+Для успешного выполенния конфигурации нам поотребуется:
+
+
+sqlite3
+libqt4-dev
+
+```
+sudo apt-get install libtool pkg-config
+
+sudo apt-get install bison
+
+sudo apt-get install libssl-dev
+
+sudo apt-get install libpcre3-dev
+
+sudo apt-get install zlib1g-dev
+
+apt install ifconfig net-tools openssh-server
+
+apt install mc
+
+
 
 apt-get install libmysql++-dev
 
@@ -7,17 +44,118 @@ sudo apt-get install firebird2.5-examples firebird2.5-dev
 
 sudo apt-get install postgresql postgresql-contrib
 
+sudo apt-get install libpq-dev
+
 sudo apt-get install libsnmp-dev
 
+sudo apt-get install libasound-dev
+
+
+---------------------------------------------------------
+checking portaudio.h usability... no
+SOLUTION:  https://stackoverflow.com/questions/20023131/cannot-install-pyaudio-gcc-error
+
+First we need to install portaudio module
+sudo apt-get install libasound-dev
+
+Download portaudio from
+http://portaudio.com/download.html
+To
+/home/user/install/
+cd ../../
+cd install
+
+tar -zxvf [portaudio.tgz]
+tar -zxvf pa_stable_v190600_20161030.tgz
+
+cd portaudio
+./configure
+make
+
+sudo make install
+sudo pip install pyaudio
+
+Check the version of pyaudio, it should be 0.2.9
+---------------------------------------------------------
+
+
+cd ../../
+cd dev/openscada-0.8.19
+
+
+apt update 
+apt upgrade
+apt-get upgrade
+
+
+---------------------------------------------------------
+checking  GD library  usability... no
+
+sudo apt-get install php5-gd 
+
+sudo apt-get install libgd2-xpm-dev
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+checking fftw3.h usability... no
+SOLUTION:  http://www.fftw.org/download.html
+
+sudo ./configure
+
+sudo make install
+
+---------------------------------------------------------
+-----------------------CONFIGURE FINISHED----------------
+---------------------------------------------------------
+
+
+---------------------------------------------------------
+--------------------------MAKE --------------------------
+
+
+sudo ./configure
+
+sudo make install
+
+
+  Сборка проекта OpenSCADA:
+sudo make
+
+
+
+Запуск   openSCADA   просто из исполняемого файла
+Описание и нужную строчку для запуска можно найти вот тут 
+/home/mobelus/dev/openscada-0.8.19/data/ModelsDB/AGLKS/openscada_demo
+
+
+(Переходим в папку куда собирается исполняемый файл  openSCADA)
+cd src_call
+
+openscada --CoreDumpAllow --Config=./oscada_AGLKS.xml
 
 
 
 
-# MFC All Controls App
-MFC Project with most used Interface elements shown on one Dialog-window with russian translation for everyone who is not familiar with the Interface-Elements in a Software-Product.
+После успешного запуска потребуется логин + пароль:
+
+log/pass:
+
+root
+openscada
+
+log/pass:
+
+user
+user
+```
 
 
 
+
+# Сборка OLD on Ubuntu 17
+
+```
 apt update 
 apt upgrade
 apt-get upgrade
@@ -27,47 +165,46 @@ apt install ifconfig net-tools openssh-server
 apt install mc
 
 
+mkdir develop  
+cd develop/  
+svn co http://oscada.org/svn/trunk/OpenSCADA/  
 
-mkdir develop
-cd develop/
-svn co http://oscada.org/svn/trunk/OpenSCADA/
-
-cd OpenSCADA/
-autoreconf -if
-./configure
-make
-install
-
+cd OpenSCADA/  
+autoreconf -if  
+./configure  
+make  
+install  
+```
 
 
 make clean
 
 
-
+```
 wget -O - http://ftp.oscada.org/Misc/pkgSignKey | sudo apt-key add 
 
 wget -m ftp://ftp.oscada.org/OpenSCADA/Work/Ubuntu/16.04 /home/superuser/Downloads
 
-wget http://ftp.oscada.org/Misc/pkgSignKey
-apt-key add pkgSignKey
-apt update
+wget http://ftp.oscada.org/Misc/pkgSignKey  
+apt-key add pkgSignKey  
+apt update  
 
 nano /etc/apt/sources.list
 
 apt-cache search SCADA
+```
 
-
-
-apt-get install openscada-Model.AGLKS
-apt-get install openscada-Model.AGLKS --allow-unauthenticated
-apt-get install openscada-Model.AGLKS --allow-unauthenticated
-
+```
+apt-get install openscada-Model.AGLKS  
+apt-get install openscada-Model.AGLKS --allow-unauthenticated  
+apt-get install openscada-Model.AGLKS --allow-unauthenticated  
+```
 
 chmod +x open-scada-install-depend
 
 
 
-
+```
 libtool pkg-config
 zlib1g-dev
 libpcre3-dev
@@ -77,13 +214,13 @@ bison
 sqlite3
 libsqlite3-dev
 libmysql++-dev
-
+```
 
 ---------------------- OPEN SCADA INSTALL DEPENDENCIES -------------------------
 
 #!/usr/bin/env bash
 
-apt update
+apt update  
 apt install -y pkg-config libtool zlib1g-dev libpcre3-dev libssl-dev libqt4-dev bison sqlite3 libsqlite3-dev libmysql++-dev
 
 
@@ -102,9 +239,10 @@ apt install autoconf pkg-config
 
 
 #!/usr/bin/env bash
-
+```
 apt update
 apt install -y libtool zlib1g-dev libpcre3-dev libssl-dev libqt4-dev bison sqlite3 libsqlite3-dev libmysql++-dev
+```
 
 apt-cache search gcc
 
@@ -200,25 +338,26 @@ phonon-backend-gstreamer
 
 
 
-
+```
 ./configure --disable-option-checking --prefix=/usr/local --without-netsnmp --without-gtk2 --with-ssl=/usr/local/opt/openssl --with-sqlite3=/usr/local/opt/sqlite --with-unixodbc=/usr/local/opt/unixodbc CC=/usr/local/bin/gcc-4.8 CXX=/usr/local/bin/g++-4.8 CPP=/usr/local/bin/cpp-4.8 CFLAGS=-fno-strict-aliasing
 CC=/usr/local/bin/gcc-4.8 ; CXX=CC=/usr/local/bin/g++-4.8 ; CPP=/usr/local/bin/cpp-4.8 ; CFLAGS=-fno-strict-aliasing ; make menuselect/cmenuselect menuselect/nmenuselect menuselect/gmenuselect menuselect/menuselect menuselect-tree menuselect.makeopts
 menuselect/menuselect --enable DISABLE_INLINE menuselect.makeopts
 
 
-superuser@superuser-Z370-HD3P:~$ mkdir develop
-superuser@superuser-Z370-HD3P:~$ cd develop/
+superuser@superuser-Z370-HD3P:~$ mkdir develop  
+superuser@superuser-Z370-HD3P:~$ cd develop/  
 superuser@superuser-Z370-HD3P:~/develop$ svn co http://oscada.org/svn/trunk/OpenSCADA/
+```
 
 
 
 autoreconf -if
 
 
-superuser@superuser-Z370-HD3P:~/develop/OpenSCADA$ ./configure --help
+superuser@superuser-Z370-HD3P:~/develop/OpenSCADA$ ./configure --help  
 -- HELPING INFORMATION HOW TO LAUNCH
 
-
+```
 superuser@superuser-Z370-HD3P:~/develop/OpenSCADA$ ./configure 
 checking build system type... x86_64-pc-linux-gnu
 checking host system type... x86_64-pc-linux-gnu
@@ -229,6 +368,7 @@ checking for a thread-safe mkdir -p... /bin/mkdir -p
 checking for gawk... no
 checking for mawk... mawk
 checking whether make sets $(MAKE)... yes
+```
 
 
 superuser@superuser-Z370-HD3P:~/develop/OpenSCADA$ ./configure --help
