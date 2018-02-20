@@ -1,4 +1,16 @@
 
+apt-get install libmysql++-dev
+
+sudo apt-get install sqlite3 libsqlite3-dev
+
+sudo apt-get install firebird2.5-examples firebird2.5-dev 
+
+sudo apt-get install postgresql postgresql-contrib
+
+sudo apt-get install libsnmp-dev
+
+
+
 
 
 # MFC All Controls App
