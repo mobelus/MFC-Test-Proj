@@ -39,6 +39,36 @@ superuser@superuser-Z370-HD3P:~$ ./configure --help
 --------------------------------------------------------
 
 
+sudo cp data/ModelsDB/AGLKS/openscada_demo /usr/bin
+sudo cp data/ModelsDB/AGLKS/oscada_AGLKS.xml /etc
+
+sudo mkdir /var/spool/openscada
+sudo mkdir /var/spool/openscada/{DATA,icons,LibsDB,AGLKS}
+sudo cp data/LibsDB/*.db /var/spool/openscada/LibsDB
+sudo cp data/ModelsDB/AGLKS/*.db /var/spool/openscada/AGLKS
+sudo cp data/icons/* /var/spool/openscada/icons
+sudo install -m 777 -d /var/spool/openscada/ARCHIVES/{MESS,VAL}
+
+
+
+openscada_demo
+
+
+
+
+mobelus@ubuntu:~/dev/openscada-0.8.19$ 
+
+
+--------------------------------------------------------
+--------------------------------------------------------
+------------------------------------------VIRTUAL UBUNTU
+--------------------------------------------------------
+--------------------------------------------------------
+
+
+
+
+
 https://packages.ubuntu.com/trusty/amd64/libportaudio-dev/download
 
 
