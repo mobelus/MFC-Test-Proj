@@ -166,6 +166,7 @@ sudo apt update
 
 
 
+sudo apt install libqt4-dev
 
 sudo apt install qtbase5-dev
 
