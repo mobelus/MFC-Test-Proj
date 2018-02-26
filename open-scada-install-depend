@@ -31,6 +31,183 @@ superuser@superuser-Z370-HD3P:~$ ./configure --help
 
 
 
+```
+--------------------------------------------------------
+--------------------------------------------------------
+------------------------------------------VIRTUAL UBUNTU
+--------------------------------------------------------
+--------------------------------------------------------
+
+
+https://packages.ubuntu.com/trusty/amd64/libportaudio-dev/download
+
+
+/home/mobelus/dev/OpenSCADA
+
+
+libasound2-dev libportaudio2 libportaudiocpp0
+
+
+
+
+
+
+
+http://www.portaudio.com/download.html
+
+http://portaudio.com/docs/v19-doxydocs/compile_linux.html
+
+www.alsa-project.org
+
+
+
+
+
+
+
+
+
+sudo add-apt-repository "deb http://us.archive.ubuntu.com/ubuntu/ saucy universe nultiverse"
+
+sudo apt-get install portaudio19-dev
+sudo apt-get install portaudio-19-dev
+sudo apt-get install libportaudio
+sudo apt-get install libPortAudio
+sudo apt-get install Portaudio
+sudo apt-get upgrade portaudio18-dev
+sudo apt-get -f upgrade portaudio18-dev
+sudo apt-get -f install portaudio19-dev
+sudo apt-get -f install libportaudio-dev
+sudo apt-get -f upgrade libportaudio-dev
+
+sudo apt-get remove libportaudio-dev
+sudo apt-get -f install libportaudio-dev
+sudo apt-get install libportaudio-dev
+sudo apt-get install portaudio-dev
+sudo apt-get install portaudio19-dev
+sudo apt-get install libportaudio0-dev
+sudo apt-get install libportaudio-dev
+sudo apt-get install libportaudio0
+
+sudo add-apt-repository "deb http://us.archive.ubuntu.com/ubuntu/ saucy universe nultiverse"
+
+sudo apt-get install portaudio-dev
+sudo apt-get install libportaudio-dev
+sudo apt-get install libportaudio19-dev
+sudo apt-get install libportaudio
+
+
+
+
+
+
+
+
+--------------- QT PROBLEM -------------------
+
+https://wiki.qt.io/Install_Qt_5_on_Ubuntu
+
+qtdeclarative5-dev
+
+qtbase5-dev
+
+libqt5opengl5-gles-dev
+
+--------------- QT PROBLEM SOLUTION -------------------
+
+https://repogen.simplylinux.ch/generate.php
+
+
+
+#------------------------------------------------------------------------------#
+#                            OFFICIAL UBUNTU REPOS                             #
+#------------------------------------------------------------------------------#
+
+
+###### Ubuntu Main Repos
+deb http://ru.archive.ubuntu.com/ubuntu/ xenial main restricted universe multiverse 
+
+###### Ubuntu Update Repos
+deb http://ru.archive.ubuntu.com/ubuntu/ xenial-security main restricted universe multiverse 
+deb http://ru.archive.ubuntu.com/ubuntu/ xenial-updates main restricted universe multiverse 
+
+###### Ubuntu Partner Repo
+deb http://archive.canonical.com/ubuntu xenial partner
+deb-src http://archive.canonical.com/ubuntu xenial partner
+
+#------------------------------------------------------------------------------#
+#                           UNOFFICIAL UBUNTU REPOS                            #
+#------------------------------------------------------------------------------#
+
+
+###### 3rd Party Binary Repos
+
+#### GetDeb - http://www.getdeb.net
+## Run this command: wget -q -O- http://archive.getdeb.net/getdeb-archive.key | sudo apt-key add -
+deb http://archive.getdeb.net/ubuntu xenial-getdeb apps
+
+
+
+
+
+
+
+
+sudo nano /etc/apt/sources.list
+
+CTRL + C
+CTRL + V
+
+
+EXIT -> YES
+
+sudo apt update
+
+
+
+
+
+sudo apt install qtbase5-dev
+
+
+--------------------------------------------------
+checking for gd.h... no
+configure: error: The headers of the GD library aren't found. Install or check the GD developing package!
+
+--SLUTION 
+
+--------------------------------------------------------
+--------------------------------------------------------
+------------------------------------------VIRTUAL UBUNTU
+--------------------------------------------------------
+--------------------------------------------------------
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
