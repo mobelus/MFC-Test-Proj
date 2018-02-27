@@ -100,21 +100,19 @@ www.alsa-project.org
 sudo add-apt-repository "deb http://us.archive.ubuntu.com/ubuntu/ saucy universe nultiverse"
 
 sudo apt-get install portaudio19-dev
-sudo apt-get install portaudio-19-dev
-sudo apt-get install libportaudio
-sudo apt-get install libPortAudio
-sudo apt-get install Portaudio
-sudo apt-get upgrade portaudio18-dev
-sudo apt-get -f upgrade portaudio18-dev
-sudo apt-get -f install portaudio19-dev
-sudo apt-get -f install libportaudio-dev
-sudo apt-get -f upgrade libportaudio-dev
 
+sudo apt-get -f upgrade libportaudio-dev
 sudo apt-get remove libportaudio-dev
 sudo apt-get -f install libportaudio-dev
 sudo apt-get install libportaudio-dev
 sudo apt-get install portaudio-dev
 sudo apt-get install portaudio19-dev
+
+
+
+
+---------------------------------
+
 sudo apt-get install libportaudio0-dev
 sudo apt-get install libportaudio-dev
 sudo apt-get install libportaudio0
@@ -126,7 +124,7 @@ sudo apt-get install libportaudio-dev
 sudo apt-get install libportaudio19-dev
 sudo apt-get install libportaudio
 
-
+-----------------------------------------
 
 
 
@@ -262,8 +260,9 @@ http://wiki.oscada.org/Doc/SborkaIzIsxodnikov
 sqlite3
 libqt4-dev
 
+pkg-config
 
-sudo apt-get install libtool pkg-config
+sudo apt-get install libtool 
 
 sudo apt-get install bison
 
