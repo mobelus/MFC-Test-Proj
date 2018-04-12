@@ -2,6 +2,19 @@
 MFC Project with most used Interface elements shown on one Dialog-window with russian translation for everyone who is not familiar with the Interface-Elements in a Software-Product.
 
 
+# QMediaPlayer, есть также Media Player Example
+
+https://www.youtube.com/watch?v=PutunNtVpto
+
+https://www.youtube.com/watch?v=tGKmQy-VBX0
+
+https://www.youtube.com/watch?v=ZoFm_Mznq1M
+
+
+# Animation with the QGraphicsItem
+
+https://www.youtube.com/watch?v=fmSs2mNGh9I
+
 
 
 https://kirov.hh.ru/vacancy/24915075
@@ -13,6 +26,7 @@ https://kirov.hh.ru/vacancy/24915075
 
 https://career.ru/vacancy/24844832?query=c%2B%2B
 
+```
 Junior C++ developer
 з/п не указана
 
@@ -49,11 +63,11 @@ Java
 SQL
 Откликнуться
 Вакансия опубликована 9 апреля 2018
-
+```
 ==================================================================================
 
 https://kirov.hh.ru/vacancy/24548274?query=c%2B%2B
-
+```
 Программист C++
 от 60 000 до 90 000 руб. на руки
 
@@ -90,13 +104,14 @@ STL
 Бурлак Александр Николаевич
 +7 (495) 6400988
 burlak@ib.ru
-
+```
 
 
 ==================================================================================
 
 https://kirov.hh.ru/vacancy/24816636?query=c%2B%2B
 
+```
 Junior программист
 з/п не указана
 
@@ -138,7 +153,7 @@ Junior программист
 Андреев Антон
 +7 (910) 4748480, с 9 до 19 часов
 andreev.anton4@wildberries.ru
-
+```
 
 
 
@@ -146,6 +161,7 @@ andreev.anton4@wildberries.ru
 
 https://career.ru/vacancy/25186259?query=c%2B%2B
 
+```
 Программист С++
 з/п не указана
 
@@ -212,7 +228,7 @@ rabotalemz@gmail.com
 Адрес
 
 Алтуфьево, Москва, Дмитровское шоссе, 110
-
+```
 
 
 =============================================================================================
@@ -221,7 +237,7 @@ rabotalemz@gmail.com
 https://kirov.hh.ru/vacancy/24915075
 
 
-
+```
 Разработчик C/C++ Junior/Middle
 от 150 000 руб. на руки
 
@@ -251,7 +267,7 @@ https://kirov.hh.ru/vacancy/24915075
 
 С уважением,
 Валерия
-
+```
 
 # RabbitVCS (TortoesGit for Linux)
 https://www.youtube.com/watch?v=fCYWjba4UHs
