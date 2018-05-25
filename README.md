@@ -1,3 +1,14 @@
+# QML DYNAMIC 
+
+
+https://www.google.com/search?source=hp&ei=dSQIW9O8HKvJ6ASaka7IDw&q=qml+property+class+c%2B%2B&oq=qml+property+class+c%2B%2B&gs_l=psy-ab.3..33i22i29i30k1.1191.12974.0.13891.27.23.1.2.2.0.153.1445.21j1.22.0....0...1c.1.64.psy-ab..2.25.1462.0..0j35i39k1j0i67k1j0i203k1j0i22i30k1j33i160k1.0.3xxetfe4zG8
+
+
+http://doc.qt.io/qt-5/qtqml-cppintegration-exposecppattributes.html
+
+http://doc.qt.io/qt-5/qtqml-cppintegration-interactqmlfromcpp.html
+
+
 # MFC All Controls App
 MFC Project with most used Interface elements shown on one Dialog-window with russian translation for everyone who is not familiar with the Interface-Elements in a Software-Product.
 
