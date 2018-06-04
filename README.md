@@ -1,5 +1,7 @@
 # QML DYNAMIC 
 
+http://blog.51cto.com/bluefish/1530035
+
  https://stackoverflow.com/questions/45123705/arranging-multiple-objects-in-a-circle-qml
 
  http://qt.apidoc.info/5.2.0/qtqml/qtqml-cppintegration-interactqmlfromcpp.html
